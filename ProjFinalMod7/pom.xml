@@ -4,4 +4,12 @@
   <artifactId>ProjFinalMod7</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Projeto Final Modulo 7</name>
+<dependencies>
+	<dependency>
+		<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
+		<version>1.18.22</version>
+		<scope>provided</scope>
+	</dependency>
+</dependencies>
 </project>
