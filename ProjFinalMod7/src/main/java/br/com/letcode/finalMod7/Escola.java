@@ -8,6 +8,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.commons.lang3.StringUtils;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Escola {
 	
 	Turma java = Turma.builder().nome("JAVA").build();
@@ -15,42 +22,15 @@ public class Escola {
 	
 	Set <String> allAlunos = new HashSet<String>();
 	
-//	public void ordenaAllAlunos() {
-//		
-//		List<String> aux = new ArrayList<String>(this.allAlunos);
-//		
-//		
-//	}
-//	
-//	private void mergeSort(List<String> lista){
-//		if (lista.size() < 2) {
-//	        return;
-//	    }
-//		
-//	    int meio = lista.size() / 2;
-//	    
-//	    List<String> esq = new ArrayList<String>();
-//	    for(int i=0; i<meio; i++) {
-//	    	esq.add(lista.get(i));
-//	    }
-//	    
-//	    List<String> dir = new ArrayList<String>();  
-//	    for(int i=meio; i<lista.size(); i++) {
-//	    	dir.add(lista.get(i));
-//	    }
-//
-//	    this.mergeSort(esq);
-//	    this.mergeSort(dir);
-//
-//	    merge(lista, esq, dir);
-//	}
-//	
-//	private void merge(List<String> lista, List<String> esq, List<String> dir) {
-//		
-//	}
+	public void addAluno(String x) {
+		this.allAlunos.add(x);
+	}
 	
 	public void imprimeAllAlunos() throws IOException {
-//		this.ordenaAllAlunos();
+		
+		for(String aluno: this.allAlunos) {
+			System.out.println(aluno);
+		}
 		
 		FileWriter arq = null;
 		try {
@@ -69,6 +49,4 @@ public class Escola {
             }
 		}
 	}
-	
-	
 }

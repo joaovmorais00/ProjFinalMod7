@@ -38,15 +38,11 @@ public class Main {
 		
 		
 		for(Aluno a : escola.java.getAlunos()) {
-			escola.allAlunos.add(a.getNome());
+			escola.addAluno(a.getNome());
 		}
 		
 		for(Aluno a : escola.bd.getAlunos()) {
-			escola.allAlunos.add(a.getNome());
-		}
-		
-		for(String a : escola.allAlunos) {
-			System.out.println(a);
+			escola.addAluno(a.getNome());
 		}
 		
 		
