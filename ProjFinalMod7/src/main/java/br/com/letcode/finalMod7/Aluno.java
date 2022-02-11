@@ -1,11 +1,15 @@
 package br.com.letcode.finalMod7;
 
-import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
-@Builder
+
+@Getter
 public class Aluno {
 	private String nome;
-	private int idade;
-	private String telefone;
+	
+	public Aluno(String nome) {
+		this.nome = nome;
+	}
 	
 }
